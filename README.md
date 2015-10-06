@@ -66,5 +66,5 @@ To keep track of seperate players, I used two routes.
 Player 1 logs in through the end point /player1
 and a session variable is marked accordingly. Player 2 enters through /player2 and a session variable is then marked.
 
-[1]: kabbydriver.meteor.com/player1
-[2]: kabbydriver.meteor.com/player2
+[1]: http://kabbydriver.meteor.com/player1
+[2]: http://kabbydriver.meteor.com/player2
