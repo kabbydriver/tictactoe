@@ -9,29 +9,49 @@ I implemented a live two-player game of tic-tac-toe using meteor
 The game uses several collections to keep players in sync
 
 Table
+
 Status
+
 Turn
+
 
 Table is used to store the state of each cell in a 
 board of tic-tac-toe. Each document in this collection is structured as follows:
 
 {
+
 	row: (1-3)
+
 	cols: [
+
 		{
+
 			col: 1,
+
 			playerMark: 0
-		}, 
-		{
-			col: 2,
-			playerMark: 0
+
 		},
+
 		{
-			col: 3,
+
+			col: 2,
+
 			playerMark: 0
+
+		},
+
+		{
+
+			col: 3,
+
+			playerMark: 0
+
 		}
+
 	]
+
 }
+
 
 Each entry in the array corresponds to a cell in the tic-tac-toe board. There are three rows in the database.
 The playerMark can store 3 values,
