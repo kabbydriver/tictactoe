@@ -1,9 +1,8 @@
 var Table = new Mongo.Collection("table");
-var Counter = new Mongo.Collection("counter");
 var Turn = new Mongo.Collection("turn");
 var Status = new Mongo.Collection("status");
+
 if (Meteor.isClient) {
-  // counter starts at 0
   Session.setDefault('counter', 0);
 
 
@@ -129,9 +128,7 @@ if (Meteor.isClient) {
   		var status = Status.findOne();
   		var rowsResult = checkRows(board);
 
-  		if (unMarkedSpaces == 0) {
-  			Status.update(status._id, {$set: {winner: 3}});
-  		}
+
 
   		if (rowsResult) { 
   			Status.update(status._id, {$set: {winner: rowsResult}});
@@ -150,6 +147,9 @@ if (Meteor.isClient) {
   			return;
   		}
 
+      if (unMarkedSpaces == 0) {
+        Status.update(status._id, {$set: {winner: 3}});
+      }
   	}
   });
 
@@ -167,7 +167,7 @@ if (Meteor.isClient) {
 
   Template.reset.events({
   	'click button': function() {
-  		var countDoc = Counter.findOne({});
+
   		Table.find({}).forEach(function (doc) {
   			var cols = doc.cols
   			cols.forEach(function(cell) {
