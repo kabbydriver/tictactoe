@@ -1,0 +1,41 @@
+<head>
+  <title>tictactoe</title>
+</head>
+
+<body>
+	<h1>Welcome, Player {{getPlayer}}</h1>
+	{{> board}}
+	{{> gameStatus}}
+	{{> reset}}
+</body>
+
+
+<template name="board">
+<table>
+	{{#each rows}} 
+		{{> row}}
+	{{/each}}
+</table>
+</template>
+
+
+<template name="row">
+	<tr>
+		{{#each columns}}	
+			{{> cell}}
+		{{/each}}
+	</tr>
+</template>
+
+<template name="cell">
+	<td>{{getImage}}</td>
+</template>
+
+<template name="gameStatus">
+	<p>{{whoseTurn}}</p>
+</template>
+
+
+<template name="reset">
+	<button>Reset</button>
+</template>
