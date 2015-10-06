@@ -36,8 +36,11 @@ board of tic-tac-toe. Each document in this collection is structured as follows:
 Each entry in the array corresponds to a cell in the tic-tac-toe board. There are three rows in the database.
 The playerMark can store 3 values,
 0 -- No player has marked this cell
+
 1 -- player 1 has marked this cell
+
 2 -- player 2 has marked this cell
+
 
 Once a cell has been marked it cannot be marked again.
 Hitting the reset button simply finds each cell and changes
@@ -46,14 +49,20 @@ its playerMark to 0
 Status is used to keep track of the game, and keep players in sync. Status just has one field, 'winner'. Winner can take on 4 values. Hitting the reset button changes 'winner' to zero.
 
 0 -- No winner so far
+
 1 -- Player 1 has won
+
 2 -- Player 2 has won
+
 3 -- The game has resulted in a tie
+
 
 Turn is used to keep track of whose turn it is. A Turn document has one field, playerTurn. This field can hold one of two values.
 
 1 -- It is player 1's turn
+
 2 -- It is player 2's turn
+
 
 A new game defaults to player 1's turn. This document is used to lock a player from making a move when it is not his/her turn. 
 Additionally, it is used to display dynamic messages about whose turn it is ("Waiting for player x", "Your Move"). Resetting the game changes this variable to 1.
