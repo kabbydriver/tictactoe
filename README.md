@@ -1,11 +1,10 @@
 Tic Tac Toe
 
 I implemented a live two-player game of tic-tac-toe using meteor
-Player 1: 
-kabbydriver.meteor.com/player1
 
-Player 2:
-kabbydriver.meteor.com/player2
+[Player 1][1]
+
+[Player 2][2]
 
 The game uses several collections to keep players in sync
 
@@ -66,3 +65,6 @@ I implemented a few helper methods that check when a game is finished and update
 To keep track of seperate players, I used two routes.
 Player 1 logs in through the end point /player1
 and a session variable is marked accordingly. Player 2 enters through /player2 and a session variable is then marked.
+
+[1]: kabbydriver.meteor.com/player1
+[2]: kabbydriver.meteor.com/player2
